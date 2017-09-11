@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "anilcancakir/laravel-starter",
+    "description": "This is a start project of laravel with Bulma & Vue with some plugins.",
+    "keywords": ["laravel", "starter"],
     "license": "MIT",
     "type": "project",
     "require": {
