@@ -3,8 +3,8 @@
 namespace App\Notifications\Auth\Password;
 
 use App\Models\User;
-use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use Illuminate\Notifications\Messages\MailMessage;
 
 class ResetPasswordNotification extends Notification
 {
@@ -43,7 +43,7 @@ class ResetPasswordNotification extends Notification
     {
         return (new MailMessage)->markdown('mail.auth.password.reset', [
             'user' => $user,
-            'token' => $this->token
+            'token' => $this->token,
         ])->subject(trans('auth.reset_password_email_subject'));
     }
 }
