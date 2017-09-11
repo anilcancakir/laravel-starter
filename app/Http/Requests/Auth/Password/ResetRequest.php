@@ -28,7 +28,7 @@ class ResetRequest extends FormRequest
             'token' => 'required',
             'email' => 'required|email',
             'password' => 'required|password|min:8|max:32|confirmed',
-            'password_confirmation' => 'required|password|min:8|max:32'
+            'password_confirmation' => 'required|password|min:8|max:32',
         ];
     }
 }
