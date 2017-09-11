@@ -43,6 +43,9 @@
                 "barryvdh/laravel-debugbar",
                 "barryvdh/laravel-ide-helper"
             ]
+        },
+        "branch-alias": {
+            "dev-master": "1.0-dev"
         }
     },
     "scripts": {
@@ -61,5 +64,6 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "optimize-autoloader": true
-    }
+    },
+    "minimum-stability": "dev"
 }
