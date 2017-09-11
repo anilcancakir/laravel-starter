@@ -3,5 +3,5 @@
 return [
     'home' => 'Ana Sayfa',
     'thanks' => 'Teşekkürler',
-    'reset' => 'Sıfırla'
+    'reset' => 'Sıfırla',
 ];

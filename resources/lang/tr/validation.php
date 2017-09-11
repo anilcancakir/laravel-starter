@@ -123,10 +123,10 @@ return [
         'password_confirmation' => 'Şifre Doğrula',
         'remember' => 'Beni Hatırla',
         'name' => 'Ad',
-        'tos' => 'Kullanım Şartları'
+        'tos' => 'Kullanım Şartları',
     ],
 
     'placeholders' => [
-        'tos' => '<a href="' . route('common.tos') . '" target="_blank">Kullanım Şartlarını</a> kabul ediyorum.'
-    ]
+        'tos' => '<a href="'.route('common.tos').'" target="_blank">Kullanım Şartlarını</a> kabul ediyorum.',
+    ],
 ];

@@ -2,18 +2,17 @@
 
 namespace App\Models;
 
-use App\Notifications\Auth\Password\ResetPasswordNotification;
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\DatabaseNotification;
-use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Notifications\DatabaseNotification;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\DatabaseNotificationCollection;
+use App\Notifications\Auth\Password\ResetPasswordNotification;
 
 /**
- * Class User
- * @package App\Models
+ * Class User.
  * @mixin Model
  * @mixin Builder
  *

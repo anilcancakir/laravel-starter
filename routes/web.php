@@ -16,7 +16,7 @@ Route::get('/', 'CommonController@showHome')->name('common.home');
 Route::get('tos', 'CommonController@showTos')->name('common.tos');
 
 // Auth routes...
-Route::group(['prefix' => 'auth'], function() {
+Route::group(['prefix' => 'auth'], function () {
     // Authentication Routes...
     Route::get('login', 'Auth\LoginController@showLoginForm')->name('auth.login');
     Route::post('login', 'Auth\LoginController@login');
