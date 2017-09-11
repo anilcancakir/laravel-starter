@@ -15,6 +15,6 @@ class PasswordValidator implements ValidatorContract
      */
     public function validate($attribute, $value, $parameters, $validator): bool
     {
-        return !$value OR !!preg_match('/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*/', $value);
+        return ! $value or (bool) preg_match('/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*/', $value);
     }
 }

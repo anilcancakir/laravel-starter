@@ -18,6 +18,5 @@ class CommonController extends Controller
 
     public function showTos()
     {
-
     }
 }

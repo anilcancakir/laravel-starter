@@ -2,8 +2,8 @@
 
 namespace Tests\Feature\Auth;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class RegisterTest extends TestCase
 {
@@ -28,12 +28,12 @@ class RegisterTest extends TestCase
             'password' => 'sampleSecr3t',
             'password_confirmation' => 'sampleSecr3t',
             'email' => $email,
-            'tos' => '1'
+            'tos' => '1',
         ])
             ->assertRedirect(route('common.home'));
 
         $this->assertDatabaseHas('users', [
-            'email' => $email
+            'email' => $email,
         ]);
     }
 }

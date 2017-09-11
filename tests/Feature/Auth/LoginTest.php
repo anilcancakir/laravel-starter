@@ -2,8 +2,8 @@
 
 namespace Tests\Feature\Auth;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class LoginTest extends TestCase
 {
@@ -26,12 +26,12 @@ class LoginTest extends TestCase
 
         $this->fakeUser([
             'email' => $email,
-            'password' => $password
+            'password' => $password,
         ]);
 
         $this->post(route('auth.login'), [
             'email' => $email,
-            'password' => $password
+            'password' => $password,
         ])
             ->assertRedirect(route('common.home'));
     }

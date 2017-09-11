@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 |
 */
 
-/** @noinspection PhpUndefinedVariableInspection */
+/* @noinspection PhpUndefinedVariableInspection */
 $factory->define(App\Models\User::class, function (Faker $faker) {
     static $password;
 

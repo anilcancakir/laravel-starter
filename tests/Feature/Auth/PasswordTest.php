@@ -2,10 +2,10 @@
 
 namespace Tests\Feature\Auth;
 
-use App\Notifications\Auth\Password\ResetPasswordNotification;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Notification;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Notifications\Auth\Password\ResetPasswordNotification;
 
 class PasswordTest extends TestCase
 {
@@ -19,19 +19,19 @@ class PasswordTest extends TestCase
         $this->get(route('auth.password.request'))
             ->assertSuccessful();
 
-        /** @noinspection PhpUndefinedMethodInspection */
+        /* @noinspection PhpUndefinedMethodInspection */
         Notification::fake();
 
         $this->post(route('auth.password.email'), [
-            'email' => $user->email
+            'email' => $user->email,
         ])
             ->assertRedirect();
 
-        /** @noinspection PhpUndefinedMethodInspection */
+        /* @noinspection PhpUndefinedMethodInspection */
         Notification::assertSentTo($user, ResetPasswordNotification::class);
 
         $this->assertDatabaseHas('password_resets', [
-            'email' => $user->email
+            'email' => $user->email,
         ]);
     }
 }
