@@ -18,6 +18,6 @@ class CommonController extends Controller
 
     public function showTos()
     {
-
+        // TODO: Implement of the tos page.
     }
 }
