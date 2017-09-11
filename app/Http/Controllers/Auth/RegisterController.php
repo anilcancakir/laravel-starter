@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Auth;
+use App\Models\User;
 use App\Events\Auth\Registered;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\RegisterRequest;
-use App\Models\User;
-use Auth;
 
 class RegisterController extends Controller
 {
@@ -23,7 +23,6 @@ class RegisterController extends Controller
 
     /**
      * Create a new controller instance.
-     *
      */
     public function __construct()
     {
