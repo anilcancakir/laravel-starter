@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Password;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\Password\EmailRequest;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
-use Password;
 
 class ForgotPasswordController extends Controller
 {
@@ -24,7 +24,6 @@ class ForgotPasswordController extends Controller
 
     /**
      * Create a new controller instance.
-     *
      */
     public function __construct()
     {
@@ -58,7 +57,7 @@ class ForgotPasswordController extends Controller
             $request->only('email')
         );
 
-        /** @noinspection PhpUndefinedClassConstantInspection */
+        /* @noinspection PhpUndefinedClassConstantInspection */
         return $response == Password::RESET_LINK_SENT
             ? $this->sendResetLinkResponse($response)
             : $this->sendResetLinkFailedResponse($request, $response);

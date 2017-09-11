@@ -2,24 +2,25 @@
 
 namespace App\Http\Traits;
 
-use Lang;
 use SEO;
+use Lang;
 
-trait SeoRoutes {
-
+trait SeoRoutes
+{
     /**
-     * The seo language file name
+     * The seo language file name.
      *
      * @var string
      */
     protected $seoLanguageGroup = 'routes';
 
     /**
-     * Set SEO data for the action
+     * Set SEO data for the action.
      *
      * @param $key
      */
-    protected function setSeo($key) {
+    protected function setSeo($key)
+    {
         $titleKey = "{$this->seoLanguageGroup}.{$key}.title";
         $descriptionKey = "{$this->seoLanguageGroup}.{$key}.description";
 

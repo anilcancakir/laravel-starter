@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\Password\ResetRequest;
-use Illuminate\Foundation\Auth\ResetsPasswords;
-use Illuminate\Http\Request;
 use Password;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\ResetsPasswords;
+use App\Http\Requests\Auth\Password\ResetRequest;
 
 class ResetPasswordController extends Controller
 {
@@ -32,7 +32,6 @@ class ResetPasswordController extends Controller
 
     /**
      * Create a new controller instance.
-     *
      */
     public function __construct()
     {
@@ -52,7 +51,7 @@ class ResetPasswordController extends Controller
     {
         $this->setSeo('auth.password.reset');
 
-        /** @noinspection PhpUndefinedFieldInspection */
+        /* @noinspection PhpUndefinedFieldInspection */
         return view('auth.passwords.reset')->with(
             ['token' => $token, 'email' => $request->email]
         );
@@ -71,14 +70,14 @@ class ResetPasswordController extends Controller
         // database. Otherwise we will parse the error and return the response.
         $response = $this->broker()->reset(
             $this->credentials($request), function ($user, $password) {
-            $this->resetPassword($user, $password);
-        }
+                $this->resetPassword($user, $password);
+            }
         );
 
         // If the password was successfully reset, we will redirect the user back to
         // the application's home authenticated view. If there is an error we can
         // redirect them back to where they came from with their error message.
-        /** @noinspection PhpUndefinedClassConstantInspection */
+        /* @noinspection PhpUndefinedClassConstantInspection */
         return $response == Password::PASSWORD_RESET
             ? $this->sendResetResponse($response)
             : $this->sendResetFailedResponse($request, $response);

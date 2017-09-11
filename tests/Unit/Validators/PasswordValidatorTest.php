@@ -2,8 +2,8 @@
 
 namespace Tests\Unit\Validators;
 
-use Tests\TestCase;
 use Validator;
+use Tests\TestCase;
 
 class PasswordValidatorTest extends TestCase
 {
@@ -38,7 +38,7 @@ class PasswordValidatorTest extends TestCase
     }
 
     /**
-     * Validate
+     * Validate.
      *
      * @param $data
      * @return bool
@@ -46,9 +46,9 @@ class PasswordValidatorTest extends TestCase
     protected function validate($data)
     {
         return Validator::make([
-            'data' => $data
+            'data' => $data,
         ], [
-            'data' => 'password'
+            'data' => 'password',
         ])->passes();
     }
 }

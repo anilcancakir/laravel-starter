@@ -2,10 +2,10 @@
 
 namespace Tests;
 
-use App\Models\User;
 use Auth;
-use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use App\Models\User;
 use Tests\Traits\CreatesApplication;
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
 {
@@ -22,6 +22,7 @@ abstract class TestCase extends BaseTestCase
 
         // Login
         Auth::login($user);
+
         return $user;
     }
 
