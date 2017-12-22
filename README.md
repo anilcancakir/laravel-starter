@@ -8,7 +8,7 @@ This is a start project of laravel with Bulma & Vue with some plugins.
 ## Usage
 The project is available on packagist. So you need create-project with composer to use!
 
-`composer create-project anilcancakir/laravel-starter -s dev`
+`composer create-project anilcancakir/laravel-starter`
 
 ### Versions
 * Laravel 5.5
