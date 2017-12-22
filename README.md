@@ -1,4 +1,8 @@
 # Laravel Starter
+
+[![StyleCI](https://styleci.io/repos/103072172/shield)](https://styleci.io/repos/103072172)
+[![Travis branch](https://img.shields.io/travis/anilcancakir/laravel-starter/master.svg?style=flat-square&label=TravisCI)](https://travis-ci.org/anilcancakir/laravel-starter/branches)
+
 This is a start project of laravel with Bulma & Vue with some plugins.
 
 ## Usage

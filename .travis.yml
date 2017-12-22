@@ -4,8 +4,11 @@ php:
   - 7.0
   - 7.1
 
-sudo: false
+before_script:
+  - cp .env.example .env
+  - composer self-update
+  - composer install --no-interaction
 
-install: travis_retry composer install --no-interaction --prefer-source
-
-script: vendor/bin/phpunit --verbose
+script:
+  - php artisan key:generate
+  - vendor/bin/phpunit --verbose
