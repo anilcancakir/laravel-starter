@@ -8,11 +8,14 @@ The project is available on packagist. So you need create-project with composer 
 
 ### Versions
 * Laravel 5.5
-* Bulma 5.1
-* Vue 2.4.2
+* Axios 0.17+
+* Lodash 4.17.4+
+* Bulma 0.6.1+
+* Vue 2.5.7+
 * Font-Awesome 4.7
 
 ### Packages
 * artesaos/seotools
 * barryvdh/laravel-ide-helper
 * barryvdh/laravel-debugbar
+* doctrine/dbal
